@@ -1,22 +1,42 @@
-1. Create a repository (public) (shell-script)
-$ git branch -M master
-raghunaga.p.yara@HDC3-LX-125ZFJX MINGW64 /c/DevOps/repos/my-shell-scripts (master)
-2. clone into your laptop
-    $ cd /c/DevOps/repos/
-    $ git clone https://github.com/NagaYara/my-shell-scripts.git
-3. Select the main branch. Generally, main branch is the master branch.
-4. Open the file in VSC and make the changes
-	Ex. C:\Devops\repos\shell-script --> create README.MD
-5. Open the GitBash (git bash is a client) and select the path - /c/DevOps/repos/
-6. git status
-$ git status
-On branch master
-No commits yet
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-        README.MD
-nothing added to commit but untracked files present (use "git add" to track)
-7. $ git add README.MD --> Saving the changes into the temporary area or staging area
-from here we need to commit the changes. 
-8. $ git commit -m "First time commit" --> Committing the changes into the local repo and provide the user name and email to know who is committing the changes
-9. $ git push origin master --> Pushing the changes to central repo
+GIT Practice
+
+GITHUB
+    Step 1
+        Create a repository (public) (shell-script) # my-shell-scripts repository created
+
+GITBASH
+    step 2
+        Install any of the GIT client (git bash, git lab, bit bucket) and clone the repository to your computer
+        create the folder to store the repositories # go to the path C:\Devops\repos\
+        clone the repository command 
+        $ git clone <https://github.com/NagaYara/my-shell-scripts.git> 
+
+    Step 3
+        by default git is configured with main branch, that means its prod branch. but for easy understanding we can change the name to master. 
+        configure the branch in git bash client command
+        $ git branch -M master
+        raghunaga.p.yara@HDC3-LX-125ZFJX MINGW64 /c/DevOps/repos/my-shell-scripts (master)
+
+Visual Studio Code
+        Install the VSC -> New window -> Open Folder -> Select the folder where your repositories are located
+        Ex. C:\Devops\repos\shell-script
+    
+    Step 4
+        Select the repository and create the new file/ folder # created README.MD file
+
+GITBASH
+    Step 5 ## Check the staus if any changes are done in the repository
+        Go to the path, where the repositories are located # /c/DevOps/repos/my-shell-scripts
+        $ git status # you can see the changes done in vSC files, i.e. a new file (README.MD) added into repository
+              
+    Step 6 ## Save the changes into the temporary area or staging area
+        $ git add README.MD
+
+    Step 7 ##  Committing the changes into the local repo. Provide the authentication to commit (To know who's commiting the changes)
+        $ git commit -m "comment to commit"
+
+    Step 8 ## Pushing the changes to Central repo
+        $ git push origin master
+
+    Step 9 ## Check if any more changes still need to be commit / 
+        $ git status
