@@ -38,5 +38,4 @@ GITBASH
     Step 8 ## Pushing the changes to Central repo
         $ git push origin master
 
-    Step 9 ## Check if any more changes still need to be commit / 
-        $ git status
+    Step 9 ## Check the updated content in GITHUB
