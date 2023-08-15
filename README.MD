@@ -1,8 +1,10 @@
 1. Create a repository (public) (shell-script)
-2. clone into your laptop
-3. Select the main branch. Generally, main branch is the master branch.
 $ git branch -M master
 raghunaga.p.yara@HDC3-LX-125ZFJX MINGW64 /c/DevOps/repos/my-shell-scripts (master)
+2. clone into your laptop
+    $ cd /c/DevOps/repos/
+    $ git clone https://github.com/NagaYara/my-shell-scripts.git
+3. Select the main branch. Generally, main branch is the master branch.
 4. Open the file in VSC and make the changes
 	Ex. C:\Devops\repos\shell-script --> create README.MD
 5. Open the GitBash (git bash is a client) and select the path - /c/DevOps/repos/
