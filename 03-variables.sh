@@ -2,6 +2,8 @@
 
 echo "Hello world, I am learning DevOps with AWS"
 
+# provide the values while executing
+
 PERSON1=$1 # This is the first value from command line
 PERSON2=$2 # This is the second value from command line
 

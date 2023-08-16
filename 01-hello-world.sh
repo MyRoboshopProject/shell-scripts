@@ -1,6 +1,7 @@
 #!/bin/bash
 
 echo "Hello world, I am learning DevOps with AWS"
+# Variable Declrations 
 
 PERSON1=Sachin
 PERSON2=Rohit
