@@ -14,6 +14,7 @@ VALIDATE (){
     if [ $1 -ne 0 ]
     then
         echo "$2 is FAILURE"
+        exit 1
     else
         echo "$2 is SUCCESS"
     fi
@@ -30,7 +31,7 @@ fi
 
 # it is our responsiblity to check installation is success or not
 # So that calling functions to validate the previous command is success/ failure
-yum install mysql -y &>>$LOGFILe
+yum install mysql -y &>>$LOGFILE
 VALIDATE $? "Installing MySQL"
 
 yum install postfix -y &>>$LOGFILE
