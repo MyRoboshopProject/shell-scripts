@@ -3,6 +3,9 @@
 VAR1=$1
 VAR2=$2
 
+# To print the script name
+echo "script-name: $0"
+
 # print only the first input provided by user
 echo "variable 1: $VAR1"
 
