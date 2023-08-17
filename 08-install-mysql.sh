@@ -13,9 +13,10 @@ then
 #     echo "you are the root user"
 fi
 
-yum install mysqllll -y
+yum install mysql -y
 
 # it is our responsiblity to check installation is success or not
+
 if [ $? -ne 0 ]
 then
     echo "ERROR:: MySQL Installation is error"
