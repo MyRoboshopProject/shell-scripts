@@ -2,9 +2,12 @@
 
 # Variables
 USERID=$(id -u)
-SCRIPT_NAME=$0
-
 DATE=$(date +%F)
+SCRIPT_NAME=$0
+R="\e[31m"
+G="\e[32m"
+N="\e[0m"
+LOGFILE=/tmp/$SCRIPT_NAME-$DATE
 
 # should run with sudo user
 if [ $USERID -ne 0 ]
@@ -19,32 +22,17 @@ do
     yum install $i -y
 done
 
-# if condition to check the previous command status
-if [ $? -ne 0 ]
-then
-    echo "FAILURE:: $1 installation is failed"
-    exit 1
-else
-    echo "SUCCESS:: $1 Installation is success"
-fi
+VALIDATE $? "Installing $1"
 
-if [ $? -ne 0 ]
-then
-    echo "ERROR:: $2 installation is error"
-    exit 1
-else
-    echo "SUCCESS:: $2 installation is success"
-fi
+# Function for Validations
+VALIDATE(){
+    if [ $1 -ne 0 ]
+    then
+        echo -e "$2... $R FAILURE $N"
+        exit 1
+    else
+        echo -e "$2... $G SUCCESS $N"
+    fi
+}
 
-# VALIDATE $?
-
-# # Function for Validations
-# VALIDATE(){
-#     if [ $1 -ne 0 ]
-#     then
-#         echo "Installation is failed"
-#         exit 1
-#     else
-#         echo "Installaiton is success"
-#     fi
-# }
+$@ &>>$LOGFILE
