@@ -21,9 +21,9 @@ done
 
 # Function for Validations
 VALIDATE() {
-    if [ $1 -ne 0 ]
+    if [ $@ -ne 0 ]
     then
-        echo "Installation is failure"
+        echo "Installation is failed"
     else
         echo "Installaiton is success"
     fi
