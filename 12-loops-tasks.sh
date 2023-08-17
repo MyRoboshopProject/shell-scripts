@@ -19,15 +19,22 @@ do
     yum install $i -y
 done
 
-# Function for Validations
-VALIDATE(){
-    if [ $1 -ne 0 ]
-    then
-        echo "Installation is failed"
-        exit 1
-    else
-        echo "Installaiton is success"
-    fi
-}
+# if condition to check the previous command status
+if [ $? -ne 0 ]
+then
+    echo "FAILURE:: Installation is failed"
+    exit 1
+fi
 
-VALIDATE $?
+# VALIDATE $?
+
+# # Function for Validations
+# VALIDATE(){
+#     if [ $1 -ne 0 ]
+#     then
+#         echo "Installation is failed"
+#         exit 1
+#     else
+#         echo "Installaiton is success"
+#     fi
+# }
