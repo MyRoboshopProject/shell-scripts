@@ -20,10 +20,11 @@ do
 done
 
 # Function for Validations
-VALIDATE() {
-    if [ $@ -ne 0 ]
+VALIDATE(){
+    if [ $1 -ne 0 ]
     then
         echo "Installation is failed"
+        exit 1
     else
         echo "Installaiton is success"
     fi
