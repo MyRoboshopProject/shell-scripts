@@ -22,8 +22,10 @@ done
 # if condition to check the previous command status
 if [ $? -ne 0 ]
 then
-    echo "FAILURE:: Installation is failed"
+    echo "FAILURE:: $1 is failed"
     exit 1
+else
+    echo "SUCCESS:: $1 is success"
 fi
 
 # VALIDATE $?
