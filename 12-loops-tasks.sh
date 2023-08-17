@@ -28,13 +28,13 @@ else
     echo "SUCCESS:: $1 installation is success"
 fi
 
-if [ $? -ne 0 ]
-then
-    echo "FAILURE:: $2 installation is failed"
-    exit 1
-else
-    echo "SUCCESS:: $2 installation is success"
-fi
+# if [ $? -ne 0 ]
+# then
+#     echo "FAILURE:: $2 installation is failed"
+#     exit 1
+# else
+#     echo "SUCCESS:: $2 installation is success"
+# fi
 
 # VALIDATE $?
 
