@@ -24,8 +24,7 @@ if [ $? -ne 0 ]
 then
     echo "FAILURE:: $@ installation is failed"
     exit 1
-else
-    echo "SUCCESS:: $@ installation is success"
+
 fi
 
 # if [ $? -ne 0 ]
