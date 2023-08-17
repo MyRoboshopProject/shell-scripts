@@ -1,6 +1,11 @@
+#!/bin/bash
+
 # Install My SQL and postfix trhough script
 
-#!/bin/bash
+# Date variable
+DATE=$(date +%F)
+SCRIPT_NAME=$0
+LOGFILE=/tmp/$SCRIPT_NAME-$DATE.log
 
 USERID=$(id -u)
 
@@ -25,8 +30,8 @@ fi
 
 # it is our responsiblity to check installation is success or not
 # So that calling functions to validate the previous command is success/ failure
-yum install mysql -y
+yum install mysql -y &>>$LOGFILe
 VALIDATE $? "Installing MySQL"
 
-yum install postfix -y
+yum install postfix -y &>>$LOGFILE
 VALIDATE $? "Installing postfix"
