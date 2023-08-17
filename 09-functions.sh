@@ -13,10 +13,10 @@ USERID=$(id -u)
 VALIDATE (){
     if [ $1 -ne 0 ]
     then
-        echo -e "\e[31m $2 is FAILURE"
+        echo -e "\e[0m $2 is \e[31m FAILURE"
         exit 1
     else
-        echo -e "\e[32m $2 is SUCCESS"
+        echo -e "\e[0m $2 is \e[31m SUCCESS"
     fi
 }
 
