@@ -22,8 +22,6 @@ do
     yum install $i -y
 done
 
-VALIDATE $? "Installing $1"
-
 # Function for Validations
 VALIDATE(){
     if [ $1 -ne 0 ]
@@ -35,4 +33,5 @@ VALIDATE(){
     fi
 }
 
+VALIDATE $? "Installing $1"
 $@ &>>$LOGFILE
