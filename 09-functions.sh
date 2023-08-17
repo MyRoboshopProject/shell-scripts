@@ -16,7 +16,7 @@ VALIDATE (){
         echo -e "\e[0m $2 is \e[31m FAILURE"
         exit 1
     else
-        echo -e "\e[0m $2 is \e[31m SUCCESS"
+        echo -e "\e[0m $2 is \e[32m SUCCESS"
     fi
 }
 
