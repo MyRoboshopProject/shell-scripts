@@ -4,6 +4,7 @@
 
 USERID=$(id -u)
 
+# this function shold validate previous command and inform user it is success or failure
 VALIDATE (){
     if [ $1 -ne 0 ]
     then
@@ -13,6 +14,7 @@ VALIDATE (){
     fi
 }
 
+# check the user is running with sudo access, and inform to run with root user if not
 if [ $USERID -ne 0 ]
 then
     echo "ERROR:: Please run with sudo user"
@@ -22,7 +24,7 @@ then
 fi
 
 # it is our responsiblity to check installation is success or not
-
+# So that calling functions to validate the previous command is success/ failure
 yum install mysql -y
 VALIDATE $? "Installing MySQL"
 
