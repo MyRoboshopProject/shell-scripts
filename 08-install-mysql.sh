@@ -25,7 +25,7 @@ else
     echo "SUCCESS:: MySQL Installation is success"
 fi
 
-yum install postfiix -y
+yum install postfix -y
 
 if [ $? -ne 0 ]
 then
