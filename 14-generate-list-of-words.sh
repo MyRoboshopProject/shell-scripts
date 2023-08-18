@@ -10,5 +10,11 @@ if [ $# -ne 1 ]
         exit 1
 fi
 
+# Check if the input file exists
+if [ ! -f "$input_file" ]; then
+    echo "Input file not found."
+    exit 1
+fi
+
 
 
