@@ -41,4 +41,4 @@ input_string=$1
 # Remove spaces and convert to lowercase for accurate palindrome check
 input_string=$(echo "$input_string" | tr -d '[:space:]' | tr '[:upper:]' '[:lower:]')
 
-is_palindrome "$input_string"
+is_palindrome $?
