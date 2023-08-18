@@ -16,5 +16,22 @@ if [ ! -f "$input_file" ]; then
     exit 1
 fi
 
+# Use tr to convert all characters to lowercase, sed to remove punctuation,
+# and awk to count the frequencies of words
+
+cat "$input_file" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-zA-Z0-9 \t]/ /g' | awk '{
+    for (i = 1; i <= NF; i++) {
+        words[$i]++;
+    }
+}
+END {
+    for (word in words) {
+        print word, words[word];
+    }
+}' | sort -k2,2nr -k1 > word_frequencies.txt
+
+echo "Word frequencies saved to word_frequencies.txt"
+
+
 
 
