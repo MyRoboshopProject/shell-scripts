@@ -30,7 +30,7 @@ is_palindrome() {
 }
 
 # Check if input is provided
-if [ $? -ne 0 ]
+if [ $? -ne 1 ]
 then
     echo "Usage: $0 <word_or_phrase>"
     exit 1
