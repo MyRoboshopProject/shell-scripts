@@ -7,5 +7,6 @@ INPUTFILE=$1
 while read line
 do
     echo $line
+    rev $INPUTFILE
 
 done < $INPUTFILE
