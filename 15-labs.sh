@@ -30,7 +30,7 @@ is_palindrome() {
 }
 
 # Check if input is provided
-if [ $# -ne 1 ]
+if [ $? -ne 0 ]
 then
     echo "Usage: $0 <word_or_phrase>"
     exit 1
@@ -42,5 +42,3 @@ input_string=$1
 input_string=$(echo "$input_string" | tr -d '[:space:]' | tr '[:upper:]' '[:lower:]')
 
 is_palindrome "$input_string"
-
-
