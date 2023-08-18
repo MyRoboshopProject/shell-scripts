@@ -34,7 +34,7 @@ do
         yum install $i -y &>>$LOGFILE
         VALIDATE $? $i       
     else
-        echo "$Y $i is already installed"
+        echo -e "$Y $i is already installed"
     fi    
 done
 
