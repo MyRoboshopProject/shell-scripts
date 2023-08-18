@@ -6,4 +6,4 @@ while read line
 do
     echo $line
 
-done < read-file.txt
+done < /home/centos/ls.log
