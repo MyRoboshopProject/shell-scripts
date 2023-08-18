@@ -14,14 +14,19 @@
 
 ## read the given word is palindrome or not
 
-echo "Enter a string"
+# Function to check if a string is a palindrome
+
+echo "Enter a String"
 read input
-reverse=""
 
-if [ $input == $reverse ]
-then
-    echo "$input is palindrome"
-else
-    echo "$input is not palindrome"
-fi
+is_palindrome() {
+    input=$1
+    reveresed=$(echo "$input" | rev)
 
+    if [ "$input" == "$revresed" ]
+    then
+        echo "Palindrome"
+    else
+        echo "Not Palindraome"
+    fi
+}
