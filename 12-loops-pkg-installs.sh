@@ -9,7 +9,7 @@ Y="\e[33m"
 
 if [ $USERID -ne 0 ]
 then
-    echo "$R ERROR:: $N Please run the script with the root user"
+    echo -e "$R ERROR:: $N Please run the script with the root user"
 fi
 
 
