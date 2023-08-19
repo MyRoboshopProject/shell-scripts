@@ -46,8 +46,8 @@
 echo "Enter the string"
 read s
 echo $s>input
-revresed=$(rev input)
-if [ $s = $reveresed ]
+reversed=$(rev input)
+if [ $s = $reversed ]
 then
     echo "it is Palindrome"
 else
