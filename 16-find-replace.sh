@@ -2,13 +2,12 @@
 
 input=$1
 
-find=Delhi
-replace=Mumbai
+find=Mumbai
+replace=Delhi
 
     
 while read line
 do
-    echo "Replacing Delhi with Mumbai"
     sed -i s/$find/$replace/g input
 
 done < $input
