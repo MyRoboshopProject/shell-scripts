@@ -17,28 +17,39 @@
 # Function to check if a string is a palindrome
 
 
-is_palindrome() {
-    input=$1
-    reveresed=$(echo "$input" | rev)
+# is_palindrome() {
+#     input=$1
+#     reveresed=$(echo "$input" | rev)
 
-    if [ "$input" == "$revresed" ]
-    then
-        echo "Palindrome"
-    else
-        echo "Not Palindraome"
-    fi
-}
+#     if [ "$input" == "$revresed" ]
+#     then
+#         echo "Palindrome"
+#     else
+#         echo "Not Palindraome"
+#     fi
+# }
 
-# Check if input is provided
-if [ $? -ne 0 ]
+# # Check if input is provided
+# if [ $? -ne 0 ]
+# then
+#     echo "Provide the input"
+#     exit 1
+# fi
+
+# input_string=$1
+
+# # Remove spaces and convert to lowercase for accurate palindrome check
+# input_string=$(echo "$input_string" | tr -d '[:space:]' | tr '[:upper:]' '[:lower:]')
+
+# is_palindrome $?
+
+echo "Enter the string"
+read s
+echo $s>input
+revresed=$(rev input)
+if [ $s = $reveresed ]
 then
-    echo "Provide the input"
-    exit 1
+    echo "it is Palindrome"
+else
+    echo "It is not a Palindrome"
 fi
-
-input_string=$1
-
-# Remove spaces and convert to lowercase for accurate palindrome check
-input_string=$(echo "$input_string" | tr -d '[:space:]' | tr '[:upper:]' '[:lower:]')
-
-is_palindrome $?
