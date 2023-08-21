@@ -3,7 +3,7 @@
 USERID=$(id -u)
 if [ $USERID -ne 0 ]
 then
-	echo "ERROR:: This command has to be run with superuser privileges"
+	echo "ERROR:: This script has to be run with superuser privileges"
 	exit 1
 fi
 
