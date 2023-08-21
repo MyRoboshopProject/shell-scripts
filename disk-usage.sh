@@ -32,7 +32,7 @@ do
     fi
 done <<< $DISK_USAGE
 
-echo -e "message: $message"
+echo -e "$R message: $N $message"
 
 #echo "$message" | mail -s "High Disk usage" info@joindevops.com
 
