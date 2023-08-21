@@ -34,4 +34,4 @@ do
     fi
 done <<< $DISK_USAGE
 
-echo -e "message: $message"
+# echo -e "message: $message"
