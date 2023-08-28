@@ -44,3 +44,8 @@ VALIDATE $? "systemctl enable ... "
 # Open the /etc/postfix/main.cf file
 cat main.cf >> /etc/postfix/main.cf
 VALIDATE $? "Copying Files.. "
+
+# touch /etc/postfix/sasl_passwd
+cp sasl_passwd /etc/postfix/sasl_passwd
+
+cp mongo.repo /etc/yum.repos.d/mongo.repo
